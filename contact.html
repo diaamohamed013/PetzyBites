@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Contact - PetzyBites</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Marcellus:wght@400&display=swap" rel="stylesheet">
+
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <link href="assets/css/main.css" rel="stylesheet">
+  <link href="assets/css/articles.css" rel="stylesheet">
+<style>
+  body, html {
+    cursor: url('assets/img/cursor.cur'), auto;
+  }
+  .language-dropdown-fixed {
+    position: fixed !important;
+    top: 18px !important;
+    right: 30px !important;
+    z-index: 3000 !important;
+  }
+  [dir="rtl"] .language-dropdown-fixed {
+    right: auto !important;
+    left: 30px !important;
+  }
+  .header .logo img {
+    height: 110px !important;
+    max-height: 100%;
+    width: auto;
+    margin-right: 8px;
+  }
+</style>
+</head>
+
+<body class="contact-page">
+
+  <header id="header" class="header d-flex align-items-center position-relative">
+    <div class="language-dropdown-fixed">
+      <select id="languageDropdown" onchange="setLanguage(this.value)">
+        <option value="en">EN</option>
+        <option value="ar">عربي</option>
+      </select>
+    </div>
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
+      <a href="home.html" class="logo d-flex align-items-center">
+        <img src="assets/img/logo.png" alt=" ">
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="home.html" data-translate="nav.home">Home</a></li>
+          <li><a href="about.html" data-translate="nav.about">About Us</a></li>
+          <li><a href="brands.html" data-translate="nav.brands">Our Brands</a></li>
+          <li><a href="https://101bite.com/store" data-translate="nav.store">Our Store</a></li>
+          <li class="nav-item dropdown megamenu-li dmenu">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdown01" aria-haspopup="true" aria-expanded="false"
+              data-translate="nav.blog">
+              Our Blog
+            </a>
+            <div class="dropdown-menu megamenu sm-menu border-top" aria-labelledby="dropdown01">
+              <div class="row" style="row-gap: 40px;">
+                <div class="col-xl-4 col-lg-4 col-md-6">
+                  <div class="menu_content">
+                    <h4>
+                      Most Recent
+                    </h4>
+                    <div class="category_links">
+                      <div class="recent_topics">
+                        <div class="recent_topics_img">
+                          <a href="article.html">
+                            <img alt="article title" src="assets/img/Process5.jpg" class="img-fluid">
+                          </a>
+                        </div>
+                        <a href="article.html" class="p-0 my-4">
+                          <span>
+                            Can Cats Eat Peanut Butter?
+                          </span>
+                        </a>
+                      </div>
+                      <a href="article.html" class="btn articlesBtn d-inline-block">
+                        Read More
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6">
+                  <div class="menu_content menu_content_mobile">
+                    <h4>
+                      Articles
+                    </h4>
+                    <div class="category_links">
+                      <a href="article.html" class="link_topics">Proper Puppy Nutrition Is One Key to a Lifetime of Good
+                        Health</a>
+                      <a href="article.html" class="link_topics">Should You Be Feeding a Large Breed Dog Formula?</a>
+                      <a href="article.html" class="link_topics">Debarking Pet Myths: Senior Dogs Don’t Need Senior Dog Food</a>
+                      <a href="article.html" class="link_topics">Pet Food Ingredients: A Diamond Pet Foods Guide</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6">
+                  <div class="menu_content">
+                    <h4>
+                      Categories
+                    </h4>
+                    <div class="category_links">
+                      <a href="categories_articles.html" class="link_topics">Adoption</a>
+                      <a href="categories_articles.html" class="link_topics">Health</a>
+                      <a href="categories_articles.html" class="link_topics">Puppy</a>
+                      <a href="all_articles.html" class="btn articlesBtn d-inline-block">
+                        See All Articles
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li><a href="gallery.html" data-translate="nav.gallery">Family Gallery</a></li>
+          <li><a href="contact.html" class="active" data-translate="nav.contact">Contact Us</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <div class="page-title dark-background" data-aos="fade" style="background-image: url(assets/img/page-title-bg.webp);">
+      <div class="container position-relative">
+        <h1 data-translate="contact.title">Contact Us</h1>
+      </div>
+    </div>
+
+    <section id="contact" class="contact section">
+      <div class="mb-5">
+<iframe style="width: 100%; height: 400px;" src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3440.2937911095723!2d31.16299437556855!3d30.42777247473284!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzDCsDI1JzQwLjAiTiAzMcKwMDknNTYuMSJF!5e0!3m2!1sen!2seg!4v1748782597598!5m2!1sen!2seg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" frameborder="0" allowfullscreen=""></iframe>      </div><!-- End Google Maps -->
+
+
+      <div class="container" data-aos="fade">
+
+        <div class="row gy-5 gx-lg-5">
+
+          <div class="col-lg-4">
+
+            <div class="info">
+              <h3 data-translate="contact.getintouch">Get in touch</h3>
+              <p data-translate="contact.intro">Contact us today and let's make your pet's nutrition our priority!</p>
+
+              <div class="info-item d-flex">
+                <i class="bi bi-geo-alt flex-shrink-0"></i>
+                <div>
+                  <h4 data-translate="contact.location">Location:</h4>
+                  <p data-translate="footer.address1"> </p>
+                  <p data-translate="footer.address2">Egypt</p>
+                </div>
+              </div>
+
+              <div class="info-item d-flex">
+                <i class="bi bi-envelope flex-shrink-0"></i>
+                <div>
+                  <h4 data-translate="footer.email.label">Email:</h4>
+                  <p data-translate="footer.email">info@petzybites.com</p>
+                </div>
+              </div>
+              <div class="info-item d-flex">
+                <i class="bi bi-phone flex-shrink-0"></i>
+                <div>
+                  <h4 data-translate="contact.call">Call:</h4>
+                  <p data-translate="footer.phone"></p>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-8">
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required data-translate-placeholder="contact.form.name">
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required data-translate-placeholder="contact.form.email">
+                </div>
+              </div>
+              <div class="form-group mt-3">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required data-translate-placeholder="contact.form.subject">
+              </div>
+              <div class="form-group mt-3">
+                <textarea class="form-control" name="message" placeholder="Message" required data-translate-placeholder="contact.form.message"></textarea>
+              </div>
+              <div class="my-3">
+                <div class="loading" data-translate="contact.form.loading">Loading</div>
+                <div class="error-message" data-translate="contact.form.error"></div>
+                <div class="sent-message" data-translate="contact.form.sent">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit" data-translate="contact.form.send">Send Message</button></div>
+            </form>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <section id="call-to-action" class="call-to-action section light-background">
+
+      <div class="content">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-6">
+              <h3 data-translate="contact.newsletter.title">Subscribe To Our Newsletter</h3>
+              <p class="opacity-50" data-translate="contact.newsletter.desc">
+                Subscribe with your email to get our latest news delivered straight to your inbox!
+              </p>
+            </div>
+            <div class="col-lg-6">
+              <form action="forms/newsletter.php" class="form-subscribe php-email-form">
+                <div class="form-group d-flex align-items-stretch">
+                  <input type="email" name="email" class="form-control h-100" placeholder="Enter your e-mail" data-translate-placeholder="contact.newsletter.placeholder">
+                  <input type="submit" class="btn btn-secondary px-4" value="Subcribe" data-translate-value="contact.newsletter.subscribe">
+                </div>
+                <div class="loading" data-translate="contact.newsletter.loading">Loading</div>
+                <div class="error-message" data-translate="contact.newsletter.error"></div>
+                <div class="sent-message" data-translate="contact.newsletter.sent">
+                  Your subscription request has been sent. Thank you!
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="footer" class="footer dark-background">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-4 col-md-6 footer-about">
+            <a href="home.html" class="logo d-flex align-items-center">
+              <span class="sitename" data-translate="footer.company">PetzyBites Company, LLC</span>
+            </a>
+            <div class="footer-contact pt-3">
+              <p data-translate="footer.address1"></p>
+              <p data-translate="footer.address2">Egypt</p>
+              <p class="mt-3"><strong data-translate="footer.phone.label"></strong> <span data-translate="footer.phone"></span></p>
+              <p><strong data-translate="footer.email.label">Email:</strong> <span data-translate="footer.email">info@petzybites.com</span></p>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4 data-translate="footer.useful">Useful Links</h4>
+            <ul>
+              <li><a href="home.html" data-translate="nav.home">Home</a></li>
+              <li><a href="about.html" data-translate="nav.about">About us</a></li>
+              <li><a href="brands.html" data-translate="nav.brands">Brands</a></li>
+              <li><a href="gallery.html" data-translate="nav.gallery">Family Gallery</a></li>
+              <li><a href="contact.html" data-translate="nav.contact">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4 data-translate="footer.brands">Our Brands</h4>
+            <ul>
+              <li><a href="https://101bite.com/" data-translate="brands.101">101 Bites</a></li>
+              <li><a href="https://101bite.com/" data-translate="brands.bessa">Bessa Bites</a></li>
+            </ul>
+          </div>
+
+
+
+        </div>
+      </div>
+    </div>
+
+    <div class="copyright text-center">
+      <div class="container d-flex flex-column flex-lg-row justify-content-center justify-content-lg-between align-items-center">
+
+        <div class="d-flex flex-column align-items-center align-items-lg-start">
+          <div>
+            © Copyright 2024 <strong><span data-translate="footer.company">PetzyBites Company, LLC</span></strong>. <span data-translate="footer.rights">All Rights Reserved</span>
+          </div>
+        </div>
+
+        <div class="social-links order-first order-lg-last mb-3 mb-lg-0">
+          <a href="https://www.facebook.com/PetzyBites"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.instagram.com/petzybites/"><i class="bi bi-instagram"></i></a>
+        </div>
+
+      </div>
+    </div>
+
+  </footer>
+
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+  <script src="assets/js/jquery-3.6.0.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/translations.js"></script>
+  <script src="assets/js/di_script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var lang = localStorage.getItem('language') || 'en';
+      var dropdown = document.getElementById('languageDropdown');
+      if (dropdown) dropdown.value = lang;
+    });
+  </script>
+
+</body>
+
+</html>
