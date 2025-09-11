@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>All Articles - PetzyBites</title>
+  <title>Dog's Pregnancy Calculator - PetzyBites</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
@@ -345,10 +345,10 @@
           <li><a href="about.html" data-translate="nav.about">About Us</a></li>
           <li><a href="brands.html" data-translate="nav.brands">Our Brands</a></li>
           <li><a href="https://101bite.com/store" data-translate="nav.store">Our Store</a></li>
-          <li><a href="pets_calculator.html" data-translate="nav.pets_calculator">Pets</a></li>
+          <li><a href="pets_calculator.html" data-translate="nav.pets_calculator" class="active">Pets</a></li>
           <li class="nav-item dropdown megamenu-li dmenu">
-            <a class="nav-link dropdown-toggle active" href="#" id="dropdown01" aria-haspopup="true" aria-expanded="false"
-              data-translate="nav.blog">
+            <a class="nav-link dropdown-toggle active" href="#" id="dropdown01" aria-haspopup="true"
+              aria-expanded="false" data-translate="nav.blog">
               Our Blog
             </a>
             <div class="dropdown-menu megamenu sm-menu border-top" aria-labelledby="dropdown01">
@@ -383,13 +383,17 @@
                       Articles
                     </h4>
                     <div class="category_links">
-                      <a data-translate="blog.content_topic1" href="article.html" class="link_topics">Proper Puppy Nutrition Is One
+                      <a data-translate="blog.content_topic1" href="article.html" class="link_topics">Proper Puppy
+                        Nutrition Is One
                         Key to a Lifetime of Good Health</a>
-                      <a data-translate="blog.content_topic2" href="article.html" class="link_topics">Should You Be Feeding a Large
+                      <a data-translate="blog.content_topic2" href="article.html" class="link_topics">Should You Be
+                        Feeding a Large
                         Breed Dog Formula?</a>
-                      <a data-translate="blog.content_topic3" href="article.html" class="link_topics">Debarking Pet Myths: Senior
+                      <a data-translate="blog.content_topic3" href="article.html" class="link_topics">Debarking Pet
+                        Myths: Senior
                         Dogs Don’t Need Senior Dog Food</a>
-                      <a data-translate="blog.content_topic4" href="article.html" class="link_topics">Pet Food Ingredients:
+                      <a data-translate="blog.content_topic4" href="article.html" class="link_topics">Pet Food
+                        Ingredients:
                         Petzybites products Guide</a>
                     </div>
                   </div>
@@ -400,10 +404,12 @@
                       Categories
                     </h4>
                     <div class="category_links">
-                      <a data-translate="blog.category1" href="categories_articles.html" class="link_topics">Adoption</a>
+                      <a data-translate="blog.category1" href="categories_articles.html"
+                        class="link_topics">Adoption</a>
                       <a data-translate="blog.category2" href="categories_articles.html" class="link_topics">Health</a>
                       <a data-translate="blog.category3" href="categories_articles.html" class="link_topics">Puppy</a>
-                      <a data-translate="blog.category_link" href="all_articles.html" class="btn articlesBtn d-inline-block">
+                      <a data-translate="blog.category_link" href="all_articles.html"
+                        class="btn articlesBtn d-inline-block">
                         See All Articles
                       </a>
                     </div>
@@ -436,7 +442,8 @@
                         style="font-size: 1.1rem;">
                         Nutritional Integrity
                       </a>
-                      <a data-translate="bag.link2" href="quality_assurance.html" class="link_topics" style="font-size: 1.1rem;">
+                      <a data-translate="bag.link2" href="quality_assurance.html" class="link_topics"
+                        style="font-size: 1.1rem;">
                         Quality Assurance
                       </a>
                       <a data-translate="bag.link3" href="ingredient_glossary.html" class="link_topics"
@@ -462,98 +469,104 @@
 
     <div class="page-title dark-background" data-aos="fade" style="background-image: url(assets/img/);">
       <div class="container position-relative">
-        <h1 data-translate="all_articles.pageTitle">pet talk</h1>
+        <h1 data-translate="pets.dog_preg">Dog's Pregnancy Calculator</h1>
       </div>
     </div>
 
-    <section id="about-3" class="section py-5">
-
+    <section id="about-3" class="section py-3">
       <div class="container">
         <div class="row">
+          <div class="col-12 mb-4">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="pets_calculator.html" data-translate="nav.pets_calculator">
+                    Pets Calculator</a></li>
+                <li class="breadcrumb-item active" aria-current="page" data-translate="pets.dog_preg">
+                  Dog's Pregnancy Calculator
+                </li>
+              </ol>
+            </nav>
+          </div>
           <div class="col-12">
-            <h2 class="content-title articleTitle mb-5" data-translate="all_articles.who">
-              All Articles
+            <h2 class="content-title articleTitle mb-5" data-translate="pets.dog_preg">
+              Dog's Pregnancy Calculator
             </h2>
           </div>
         </div>
-        <div class="row" style="row-gap: 45px;">
-          <div class="col-xl-4 col-lg-4 col-md-4" data-aos="fade-up" data-aos-delay="100">
-            <article class="article_box">
-              <div class="article_img">
-                <a href="article.html" title="A Cat Owner’s Guide to Feline Leukemia Virus (FeLV)">
-                  <img src="assets/img/Process3.jpg" alt="title from backend" class="img-fluid">
-                </a>
+        <div class="row">
+          <div class="col-xl-6 col-lg-8 col-md-10 col-12">
+            <div class="card calculator">
+              <div>
+                <label>
+                  <span data-translate="pets.day">Day</span>
+                  <select id="day"></select>
+                </label>
+                <label>
+                  <span data-translate="pets.month">Month</span>
+                  <select id="month"></select>
+                </label>
+                <label>
+                  <span data-translate="pets.year">Year</span>
+                  <select id="year"></select>
+                </label>
+                <div class="input-group">
+                  <label data-translate="pets.dog_preg_period">مدة الحمل (بين 58 و 68 يوم):</label>
+                  <input type="number" id="gestationDays" value="63" min="58" max="68">
+                </div>
               </div>
-              <div class="article_desc">
-                <a href="article.html" rel="bookmark" data-translate="blog.content_topic1">
-                  A Cat Owner’s Guide to Feline Leukemia Virus (FeLV)
-                </a>
+              <div class="mt-2 results">
+                <button onclick="calculateBirth()" data-translate="pets.preg_calc">Calculate Pregnancy Day</button>
+                <div id="result" class="result" style="display: none;"></div>
               </div>
-            </article>
-          </div>
-          <div class="col-xl-4 col-lg-4 col-md-4" data-aos="fade-up" data-aos-delay="100">
-            <article class="article_box">
-              <div class="article_img">
-                <a href="article.html" title="Common Behavior Issues with Older Dogs">
-                  <img src="assets/img/Process2.jpg" alt="title from backend" class="img-fluid">
-                </a>
-              </div>
-              <div class="article_desc">
-                <a href="article.html" rel="bookmark" data-translate="blog.content_topic2">
-                  Common Behavior Issues with Older Dogs
-                </a>
-              </div>
-            </article>
-          </div>
-          <div class="col-xl-4 col-lg-4 col-md-4" data-aos="fade-up" data-aos-delay="100">
-            <article class="article_box">
-              <div class="article_img">
-                <a href="article.html" title="Warriors’ Best Friend: Meet Gregory!">
-                  <img src="assets/img/Process4.jpg" alt="title from backend" class="img-fluid">
-                </a>
-              </div>
-              <div class="article_desc">
-                <a href="article.html" rel="bookmark" data-translate="blog.content_topic3">
-                  Warriors’ Best Friend: Meet Gregory!
-                </a>
-              </div>
-            </article>
-          </div>
-          <div class="col-xl-4 col-lg-4 col-md-4" data-aos="fade-up" data-aos-delay="100">
-            <article class="article_box">
-              <div class="article_img">
-                <a href="article.html" title="When Do Puppies Stop Growing?">
-                  <img src="assets/img/Process5.jpg" alt="title from backend" class="img-fluid">
-                </a>
-              </div>
-              <div class="article_desc">
-                <a href="article.html" rel="bookmark" data-translate="blog.content_topic4">
-                  When Do Puppies Stop Growing?
-                </a>
-              </div>
-            </article>
+            </div>
           </div>
         </div>
-        <div class="row mt-5">
-          <div class="col-12">
-            <nav aria-label="Page navigation example">
-              <ul class="pagination justify-content-center">
-                <li class="page-item">
-                  <a class="page-link" href="#" aria-label="Previous">
-                    <span aria-hidden="true">&laquo;</span>
-                  </a>
-                </li>
-                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item">
-                  <a class="page-link" href="#" aria-label="Next">
-                    <span aria-hidden="true">&raquo;</span>
-                  </a>
-                </li>
-              </ul>
-            </nav>
-          </div>
+      </div>
+    </section>
+
+    <section class="our-process section py-5">
+      <div class="container">
+        <div data-aos="fade-up" class="qualityAss_content">
+          <h2 data-translate="pets.dog_calc_preg" class="mb-4">
+            How long is a dog's pregnancy?
+          </h2>
+          <p data-translate="pets.dog_calc_preg_desc">
+            The gestation period for dogs is approximately 63 days, which is measured from the day of ovulation to the
+            day
+            of birth
+            of the puppies. The gestation period for female dogs is divided into three stages, each stage lasting 21
+            days.
+          </p>
+          <h2 data-translate="pets.dog_calc_preg_signs" class="mb-4">
+            What are the signs of pregnancy in dogs?
+          </h2>
+          <ul>
+            <li data-gc-list-depth="1" data-gc-list-style="bullet" data-translate="pets.dog_calc_preg_sign1">
+              Increased appetite.
+            </li>
+            <li data-gc-list-depth="1" data-gc-list-style="bullet" data-translate="pets.dog_calc_preg_sign2">
+              Weight gain.
+            </li>
+            <li data-gc-list-depth="1" data-gc-list-style="bullet" data-translate="pets.dog_calc_preg_sign3">
+              Increased nipple size.
+            </li>
+          </ul>
+          <p data-translate="pets.pets.dog_calc_preg_signs_important1">
+            As your dog's pregnancy nears its end, you'll notice significant enlargement of the mammary glands and
+            nipples,
+            and you
+            may even detect some milky fluid. The pregnant female dog's belly will also increase in size, and she may
+            wobble
+            slightly while walking. Toward the end of pregnancy, you may be able to see or feel the puppies moving
+            around
+            inside the
+            mother's belly.
+          </p>
+          <p data-translate="pets.pets.dog_calc_preg_signs_important2">
+            Caution: It's important to remember that other conditions can cause changes in appetite, weight gain, and
+            abdominal
+            swelling. To rule out more serious conditions, take your dog to the vet for a checkup if these signs appear.
+          </p>
         </div>
       </div>
     </section>
@@ -643,6 +656,119 @@
       var dropdown = document.getElementById('languageDropdown');
       if (dropdown) dropdown.value = lang;
     });
+  </script>
+
+  <script>
+    const daySelect = document.getElementById("day");
+    const monthSelect = document.getElementById("month");
+    const yearSelect = document.getElementById("year");
+
+    // تعبئة الشهور (1 - 12)
+    for (let m = 1; m <= 12; m++) {
+      const opt = document.createElement("option");
+      opt.value = m;
+      opt.textContent = m;
+      monthSelect.appendChild(opt);
+    }
+
+    // تعبئة السنوات (السنة الحالية و اللي قبلها)
+    const currentYear = new Date().getFullYear();
+    for (let y = currentYear - 1; y <= currentYear; y++) {
+      const opt = document.createElement("option");
+      opt.value = y;
+      opt.textContent = y;
+      yearSelect.appendChild(opt);
+    }
+
+    // دالة لتعبئة الأيام حسب الشهر والسنة
+    function populateDays() {
+      const month = parseInt(monthSelect.value);
+      const year = parseInt(yearSelect.value);
+
+      if (!month || !year) return;
+
+      const daysInMonth = new Date(year, month, 0).getDate();
+
+      daySelect.innerHTML = "";
+      for (let d = 1; d <= daysInMonth; d++) {
+        const opt = document.createElement("option");
+        opt.value = d;
+        opt.textContent = d;
+        daySelect.appendChild(opt);
+      }
+    }
+
+    // تحديث الأيام عند تغيير الشهر أو السنة
+    monthSelect.addEventListener("change", populateDays);
+    yearSelect.addEventListener("change", populateDays);
+
+    // تحديد التاريخ الحالي بشكل افتراضي
+    (function setDefaultDate() {
+      const today = new Date();
+      yearSelect.value = today.getFullYear();
+      monthSelect.value = today.getMonth() + 1;
+      populateDays();
+      daySelect.value = today.getDate();
+    })();
+
+    function calculateBirth() {
+      const day = parseInt(daySelect.value);
+      const month = parseInt(monthSelect.value) - 1;
+      const year = parseInt(yearSelect.value);
+      const gestationDays = parseInt(document.getElementById("gestationDays").value);
+
+      if (gestationDays < 58 || gestationDays > 68) {
+        alert("❌ مدة الحمل لازم تكون بين 58 و 68 يوم");
+        return;
+      }
+
+      const startDate = new Date(year, month, day);
+
+      if (isNaN(startDate)) {
+        alert("❌ من فضلك اختر تاريخ صحيح");
+        return;
+      }
+
+      const expectedDate = new Date(startDate);
+      expectedDate.setDate(startDate.getDate() + gestationDays);
+
+      const minDate = new Date(startDate);
+      minDate.setDate(startDate.getDate() + 58);
+
+      const maxDate = new Date(startDate);
+      maxDate.setDate(startDate.getDate() + 68);
+
+      // تحديد اللغة من الـ <html lang="">
+      const lang = document.documentElement.lang || "ar";
+      let locale = lang === "ar" ? "ar-EG" : "en-US";
+
+      let labels = {
+        ar: {
+          expected: "🗓️ <b>التاريخ المتوقع:</b>",
+          period: "📌 <b>الفترة المتوقعة:</b>",
+          from: "من",
+          to: "إلى"
+        },
+        en: {
+          expected: "🗓️ <b>Expected Date:</b>",
+          period: "📌 <b>Expected Period:</b>",
+          from: "From",
+          to: "To"
+        }
+      };
+
+      const t = labels[lang] || labels.ar;
+
+      const ResultBox = document.getElementById("result");
+      ResultBox.innerHTML = `
+    ${t.expected} ${expectedDate.toLocaleDateString(locale)}<br>
+    ${t.period} ${t.from} ${minDate.toLocaleDateString(locale)} 
+    ${t.to} ${maxDate.toLocaleDateString(locale)}
+  `;
+
+      ResultBox.style.display = "block";
+    }
+
   </script>
 
 </body>
