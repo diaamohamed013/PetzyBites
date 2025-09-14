@@ -414,13 +414,21 @@ html[lang="ar"] .accordion-button::after {
 }
 
 .calculator .result {
-    margin-top: 14px;
-    padding: 12px;
-    border-left: 4px solid #218838;
-    background: #fafafa;
-    border-radius: 4px;
+    border: 2px solid #218838;
+    border-radius: 200px;
+    flex-direction: column;
+    font-weight: 500;
+    height: 200px;
+    justify-content: center;
+    margin: 1rem auto 0;
+    text-align: center;
+    width: 200px;
     color: #222;
-    font-size: 14px;
+    font-size: 1rem;
+}
+
+html[dir="rtl"] .cal_note {
+    direction: ltr;
 }
 
 @media (max-width: 1198.98px) {
