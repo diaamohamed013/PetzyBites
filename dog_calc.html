@@ -499,32 +499,45 @@
               <div class="row">
                 <div class="col-xl-6 col-lg-6 col-md-12">
                   <div>
-                    <label data-translate="pets.type">Pet Type
+                    <label>
+                      <span data-translate="pets.type">
+                        Pet Type
+                      </span>
                       <select id="petType">
                         <option value="" data-translate="pets.select_type">-- Select Pet --</option>
-                        <option value="cat" data-translate="">Cat</option>
-                        <option value="dog">Dog</option>
+                        <option value="cat" data-translate="pets.cat">Cat</option>
+                        <option value="dog" data-translate="pets.dog">Dog</option>
                       </select>
                     </label>
 
-                    <label>Life Stage
+                    <label>
+                      <span data-translate="pets.life_stage">
+                        Life Stage
+                      </span>
                       <select id="lifeStage" disabled>
-                        <option value="">-- Select Life Stage --</option>
+                        <option value="" data-translate="pets.select_life_stage">-- Select Life Stage --</option>
                       </select>
                     </label>
 
-                    <label id="activityLabel">Activity Level
+                    <label id="activityLabel">
+                      <span data-translate="pets.activity_level">
+                        Activity Level
+                      </span>
                       <select id="activity" disabled>
-                        <option value="">-- Select Activity Level --</option>
+                        <option value="" data-translate="pets.select_activity_level">-- Select Activity Level --
+                        </option>
                       </select>
                     </label>
 
-                    <label>Weight
+                    <label>
+                      <span data-translate="pets.weight">
+                        Weight
+                      </span>
                       <div class="pet_weight">
                         <input id="weight" type="number" min="0" step="0.1" placeholder="e.g. 4.5" disabled>
                         <select id="weightUnit" disabled>
-                          <option value="kg">kg</option>
-                          <option value="lb">lb</option>
+                          <option value="kg" data-translate="pets.kg">kg</option>
+                          <option value="lb" data-translate="pets.lb">lb</option>
                         </select>
                       </div>
                     </label>
@@ -532,32 +545,50 @@
                 </div>
                 <div class="col-xl-6 col-lg-6 col-md-12">
                   <div>
-                    <label>Food Type
+                    <label>
+                      <span data-translate="pets.food_type">
+                        Food Type
+                      </span>
                       <select id="foodType" disabled>
-                        <option value="">-- Select Food Type --</option>
-                        <option value="dry">Dry Food</option>
-                        <option value="wet">Wet Food</option>
+                        <option value="" data-translate="pets.select_food_type">-- Select Food Type --</option>
+                        <option value="Premium" data-translate="pets.premium">Dry Food Premium</option>
+                        <option value="Economic" data-translate="pets.economic">Dry Food Economic</option>
                       </select>
                     </label>
 
-                    <label>Brand
+                    <label>
+                      <span data-translate="pets.brand">
+                        Brand
+                      </span>
                       <select id="brand" disabled>
-                        <option value="">-- Select Brand --</option>
+                        <option value="" data-translate="pets.select_brand">-- Select Brand --</option>
                       </select>
                     </label>
 
-                    <label>Product
+                    <label>
+                      <span data-translate="pets.product">
+                        Product
+                      </span>
                       <select id="product" disabled>
-                        <option value="">-- Select Product --</option>
+                        <option value="" data-translate="pets.select_product">-- Select Product --</option>
                       </select>
                     </label>
                   </div>
                 </div>
               </div>
               <div class="mt-2 results">
-                <button id="calculateBtn" disabled>Calculate</button>
-                <div id="calorieResult" class="result" style="display:none"></div>
-                <div id="feedingResult" class="result" style="display:none"></div>
+                <button id="calculateBtn" disabled data-translate="calory.calculate">Calculate</button>
+                <div class="row justify-content-center mt-5" style="row-gap: 15px;">
+                  <div class="col-xl-4 col-md-6">
+                    <div id="calorieResult" class="result" style="display:none"></div>
+                  </div>
+                  <div class="col-xl-4 col-md-6">
+                    <div id="feedingResult" class="result" style="display:none"></div>
+                  </div>
+                  <div class="col-xl-4 col-md-6">
+                    <div id="productResult" class="result" style="display:none"></div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -572,8 +603,10 @@
             The Importance of a Calorie Calculator for Dogs
           </h2>
           <p data-translate="pets.dog_calc_important_desc">
-            Calculating your dog's calorie needs will help you ensure they get the right amount of food each day. Feeding dogs the
-            correct amount of daily calories will keep them healthy and fit, and will prevent them from becoming overweight and
+            Calculating your dog's calorie needs will help you ensure they get the right amount of food each day.
+            Feeding dogs the
+            correct amount of daily calories will keep them healthy and fit, and will prevent them from becoming
+            overweight and
             obese, which can cause many health problems.
           </p>
           <h2 data-translate="pets.dog_calc_factors" class="mb-4">
@@ -583,14 +616,16 @@
             Dog Age and Different Life Stages
           </h4>
           <p data-translate="pets.dog_calc_factors_age_desc">
-            Calorie needs vary by life stage. Puppies' needs differ from those of adult dogs, and pregnant or lactating female dogs
+            Calorie needs vary by life stage. Puppies' needs differ from those of adult dogs, and pregnant or lactating
+            female dogs
             require more calories than the average adult dog.
           </p>
           <h4 data-translate="pets.calc_factors_activity">
             Activity Level
           </h4>
           <p data-translate="pets.dog_calc_factors_activity_desc">
-            Each dog breed varies in activity level. Active dogs burn more calories than sedentary dogs, so they need more calories
+            Each dog breed varies in activity level. Active dogs burn more calories than sedentary dogs, so they need
+            more calories
             each day.
           </p>
         </div>
@@ -683,359 +718,376 @@
       if (dropdown) dropdown.value = lang;
     });
   </script>
+
   <script>
-    // ---------- PRODUCTS JSON ----------
-    const PRODUCTS = [
-      // Cat Dry (4)
-      { pet: "cat", type: "dry", brand: "Royal Canin", name: "Indoor Adult RC", calories_per_100g: 370, grams_per_cup: 90 },
-      { pet: "cat", type: "dry", brand: "Royal Canin", name: "Kitten RC", calories_per_100g: 400, grams_per_cup: 95 },
-      { pet: "cat", type: "dry", brand: "Purina", name: "ONE Adult", calories_per_100g: 360, grams_per_cup: 100 },
-      { pet: "cat", type: "dry", brand: "Purina", name: "Pro Plan Sensitive", calories_per_100g: 365, grams_per_cup: 98 },
-
-      // Cat Wet (4)
-      { pet: "cat", type: "wet", brand: "Whiskas", name: "Ocean Fish", calories_per_can: 85, grams_per_can: 85 },
-      { pet: "cat", type: "wet", brand: "Whiskas", name: "Chicken in Gravy", calories_per_can: 90, grams_per_can: 85 },
-      { pet: "cat", type: "wet", brand: "Felix", name: "Tuna Jelly", calories_per_can: 80, grams_per_can: 100 },
-      { pet: "cat", type: "wet", brand: "Felix", name: "Beef in Gravy", calories_per_can: 85, grams_per_can: 100 },
-
-      // Dog Dry (4)
-      { pet: "dog", type: "dry", brand: "Pedigree", name: "Adult Beef", calories_per_100g: 360, grams_per_cup: 110 },
-      { pet: "dog", type: "dry", brand: "Pedigree", name: "Puppy Chicken", calories_per_100g: 380, grams_per_cup: 115 },
-      { pet: "dog", type: "dry", brand: "Hill's", name: "Science Diet Adult", calories_per_100g: 355, grams_per_cup: 120 },
-      { pet: "dog", type: "dry", brand: "Hill's", name: "Sensitive Stomach", calories_per_100g: 350, grams_per_cup: 118 },
-
-      // Dog Wet (4)
-      { pet: "dog", type: "wet", brand: "Cesar", name: "Chicken & Liver", calories_per_can: 150, grams_per_can: 150 },
-      { pet: "dog", type: "wet", brand: "Cesar", name: "Beef Stew", calories_per_can: 160, grams_per_can: 150 },
-      { pet: "dog", type: "wet", brand: "Pedigree", name: "Chopped Chicken", calories_per_can: 300, grams_per_can: 400 },
-      { pet: "dog", type: "wet", brand: "Pedigree", name: "Beef & Gravy", calories_per_can: 310, grams_per_can: 400 }
-    ];
-
-    // Life stages & special growth stages
-    const LIFE_STAGES = {
-      cat: ["Kitten", "Adult", "Senior"],
-      dog: ["Puppy", "Adult", "Senior"]
-    };
-
-    const GROWTH_KITTEN = [
-      { value: "kit_lt4", label: "less than 4 months" },
-      { value: "kit_4_9", label: "4-9 months" },
-      { value: "kit_9_12", label: "9-12 months" }
-    ];
-
-    const GROWTH_PUPPY = [
-      { value: "pup_lt50", label: "less than 50% of adult weight" },
-      { value: "pup_50_80", label: "50-80% of adult weight" },
-      { value: "pup_80_100", label: "80-100% of adult weight" }
-    ];
-
-    const ACTIVITY_OPTIONS = [
-      { value: "normal", text: "Normal" },
-      { value: "high", text: "High" }
-    ];
-
-    // ---------- MER factors ----------
-    const MER_FACTORS = {
-      cat: {
-        adult: { normal: 1.2, high: 1.4 },
-        senior: { normal: 0.50, high: 1.12 },
-        kitten: { kit_lt4: 2.0, kit_4_9: 2.5, kit_9_12: 2.0 }
-      },
-      dog: {
-        adult: { normal: 1.6, high: 1.8 },
-        senior: { normal: 1.5, high: 1.6 },
-        puppy: { pup_lt50: 2.0, pup_50_80: 2.0, pup_80_100: 2.0 }
+    document.addEventListener('DOMContentLoaded', function () {
+      function t(key) {
+        const htmlDir = document.documentElement.getAttribute("dir");
+        const lang = window.currentLang || (htmlDir === "rtl" ? "ar" : "en");
+        const value = translations[lang][key];
+        return value || key;
       }
-    };
 
-    // ---------- FOOD factors ----------
-    const FOOD_FACTORS = {
-      dry: 1.0,   // baseline
-      wet: 1.0    // ممكن تغيرها لو عايز تزود/تنقص شوية
-    };
+      // ---------- PRODUCTS (4) ----------
+      const PRODUCTS = [
+        // Cats
+        { pet: "cat", type: "Premium", brand: "Petzybites", name: "Bessa Bites", calories_per_100g: 380, grams_per_cup: 95 },
+        { pet: "cat", type: "Economic", brand: "Petzybites", name: "MshMsh", calories_per_100g: 320, grams_per_cup: 100 },
 
-    // ---------- elements ----------
-    const petTypeEl = document.getElementById("petType");
-    const lifeStageEl = document.getElementById("lifeStage");
-    const activityEl = document.getElementById("activity");
-    const activityLabel = document.getElementById("activityLabel");
-    const weightEl = document.getElementById("weight");
-    const weightUnitEl = document.getElementById("weightUnit");
+        // Dogs
+        { pet: "dog", type: "Premium", brand: "Petzybites", name: "101Bites", calories_per_100g: 370, grams_per_cup: 110 },
+        { pet: "dog", type: "Economic", brand: "Petzybites", name: "Doggo", calories_per_100g: 330, grams_per_cup: 115 }
+      ];
 
-    const foodTypeEl = document.getElementById("foodType");
-    const brandEl = document.getElementById("brand");
-    const productEl = document.getElementById("product");
+      // ---------- FOOD FACTORS (محفوظ كما طلبت) ----------
+      const FOOD_FACTORS = {
+        dry: {
+          Premium: { cal: 3.8, protein: 32, fat: 14 },
+          Economic: { cal: 3.2, protein: 28, fat: 10 }
+        }
+      };
 
-    const calculateBtn = document.getElementById("calculateBtn");
-    const calorieResultEl = document.getElementById("calorieResult");
-    const feedingResultEl = document.getElementById("feedingResult");
+      // life stages & growth
+      const LIFE_STAGES = { cat: ["Kitten", "Adult", "Senior"], dog: ["Puppy", "Adult", "Senior"] };
+      const GROWTH_KITTEN = [
+        { value: "kit_lt4", label: t("growth.kitten.lt4") },
+        { value: "kit_4_9", label: t("growth.kitten.4_9") },
+        { value: "kit_9_12", label: t("growth.kitten.9_12") }
+      ];
+      const GROWTH_PUPPY = [
+        { value: "pup_lt50", label: t("growth.puppy.lt50") },
+        { value: "pup_50_80", label: t("growth.puppy.50_80") },
+        { value: "pup_80_100", label: t("growth.puppy.80_100") }
+      ];
+      const ACTIVITY_OPTIONS = [
+        { value: "normal", text: t("activity.normal") },
+        { value: "high", text: t("activity.high") }
+      ];
 
-    // ---------- helpers ----------
-    function resetSelect(el, placeholderText) {
-      el.innerHTML = "";
-      const opt = document.createElement("option");
-      opt.value = "";
-      opt.textContent = placeholderText || "-- Select --";
-      el.appendChild(opt);
-      el.disabled = true;
-    }
 
-    function enableSelect(el) {
-      el.disabled = false;
-    }
+      // MER factors (كما كان)
+      const MER_FACTORS = {
+        cat: {
+          adult: { normal: 1.2, high: 1.4 },
+          senior: { normal: 0.50, high: 1.12 },
+          kitten: { kit_lt4: 2.0, kit_4_9: 2.5, kit_9_12: 2.0 }
+        },
+        dog: {
+          adult: { normal: 1.6, high: 1.8 },
+          senior: { normal: 1.5, high: 1.6 },
+          puppy: { pup_lt50: 2.0, pup_50_80: 2.0, pup_80_100: 2.0 }
+        }
+      };
 
-    function updateCalculateButtonState() {
-      const pet = petTypeEl.value;
-      const life = lifeStageEl.value;
-      const act = activityEl.value;
-      const weight = parseFloat(weightEl.value);
-      const wvalid = !isNaN(weight) && weight > 0;
-      const foodType = foodTypeEl.value;
-      const brand = brandEl.value;
-      const product = productEl.value;
+      // ---------- عناصر الصفحة ----------
+      const petTypeEl = document.getElementById("petType");
+      const lifeStageEl = document.getElementById("lifeStage");
+      const activityEl = document.getElementById("activity"); // FIXED id
+      const activityLabel = document.getElementById("activityLabel");
+      const weightEl = document.getElementById("weight");
+      const weightUnitEl = document.getElementById("weightUnit");
 
-      const enabled = pet && life && act && wvalid && foodType && brand && product;
-      calculateBtn.disabled = !enabled;
-    }
+      const foodTypeEl = document.getElementById("foodType");
+      const brandEl = document.getElementById("brand");
+      const productEl = document.getElementById("product");
 
-    function resetDependencies(ids) {
-      ids.forEach(id => {
-        const el = document.getElementById(id);
+      const calculateBtn = document.getElementById("calculateBtn");
+      const calorieResultEl = document.getElementById("calorieResult");
+      const feedingResultEl = document.getElementById("feedingResult");
+      const productResultEl = document.getElementById("productResult");
+
+      // ---------- helpers ----------
+      function resetSelect(el, placeholderText) {
         if (!el) return;
-        if (el.tagName === "SELECT") {
-          if (id === "foodType") {
+        el.innerHTML = "";
+        const opt = document.createElement("option");
+        opt.value = "";
+        opt.textContent = placeholderText || `-- ${t("pets.select")} --`;
+        el.appendChild(opt);
+        el.disabled = true;
+      }
+
+      function enableSelect(el) {
+        if (!el) return;
+        el.disabled = false;
+      }
+
+      function setLabelText(labelEl, text) {
+        if (!labelEl) return;
+        const span = labelEl.querySelector("[data-translate='pets.activity_level']");
+        if (span) {
+          span.textContent = text;
+        }
+      }
+
+      function updateCalculateButtonState() {
+        const pet = petTypeEl.value;
+        const life = lifeStageEl.value;
+        const act = activityEl.value;
+        const weight = parseFloat(weightEl.value);
+        const wvalid = !isNaN(weight) && weight > 0;
+        const foodType = foodTypeEl.value;
+        const brand = brandEl.value;
+        const product = productEl.value;
+
+        const enabled = pet && life && act && wvalid && foodType && brand && product;
+        calculateBtn.disabled = !enabled;
+      }
+
+      // خريطة لربط الـ id بالمفتاح الصحيح
+      const TRANSLATION_KEYS = {
+        lifeStage: "pets.select_life_stage",
+        activity: "pets.select_activity_level",
+        foodType: "pets.select_food_type",
+        brand: "pets.select_brand",
+        product: "pets.select_product",
+      };
+
+      function resetDependencies(ids) {
+        ids.forEach(id => {
+          const el = document.getElementById(id);
+          if (!el) return;
+
+          if (el.tagName === "SELECT") {
+            const key = TRANSLATION_KEYS[id] || `pets.select_${id.toLowerCase()}`;
+            resetSelect(el, t(key)); // الترجمة حسب اللغة
+          } else if (el.tagName === "INPUT") {
             el.value = "";
             el.disabled = true;
-          } else {
-            resetSelect(el, `-- Select ${id.charAt(0).toUpperCase() + id.slice(1)} --`);
           }
-        } else if (el.tagName === "INPUT") {
-          el.value = "";
-          el.disabled = true;
+        });
+
+        // اللابل بتاع النشاط
+        setLabelText(activityLabel, t("pets.activity_level"));
+
+        calorieResultEl.style.display = "none";
+        feedingResultEl.style.display = "none";
+        productResultEl.style.display = "none";
+        updateCalculateButtonState();
+      }
+
+
+      function populateActivityOrGrowth(pet, lifeStage) {
+        resetSelect(activityEl, t("pets.select_activity_level"));
+        if (!lifeStage) return;
+        if ((pet === "cat" && lifeStage === "kitten") || (pet === "dog" && lifeStage === "puppy")) {
+          setLabelText(activityLabel, pet === "cat" ? t("pets.kitten") : t("pets.puppy"));
+          const list = pet === "cat" ? GROWTH_KITTEN : GROWTH_PUPPY;
+          list.forEach(item => {
+            const opt = document.createElement("option");
+            opt.value = item.value;
+            opt.textContent = item.label;
+            activityEl.appendChild(opt);
+          });
+          enableSelect(activityEl);
+        } else {
+          setLabelText(activityLabel, t("pets.activity_level"));
+          ACTIVITY_OPTIONS.forEach(o => {
+            const opt = document.createElement("option");
+            opt.value = o.value;
+            opt.textContent = o.text;
+            activityEl.appendChild(opt);
+          });
+          enableSelect(activityEl);
         }
+      }
+
+      // ---------- أحداث ----------
+
+      petTypeEl.addEventListener("change", () => {
+        resetSelect(lifeStageEl, t("pets.select_life_stage"));
+        resetDependencies(["activity", "weight", "foodType", "brand", "product"]);
+        if (!petTypeEl.value) {
+          lifeStageEl.disabled = true;
+        } else {
+          const list = LIFE_STAGES[petTypeEl.value] || [];
+          list.forEach(stage => {
+            const opt = document.createElement("option");
+            opt.value = stage.toLowerCase(); // kitten, adult, senior, puppy
+            opt.textContent = stage;
+            lifeStageEl.appendChild(opt);
+          });
+          enableSelect(lifeStageEl);
+        }
+        updateCalculateButtonState();
       });
-      calorieResultEl.style.display = "none";
-      feedingResultEl.style.display = "none";
-      updateCalculateButtonState();
-    }
 
-    function populateActivityOrGrowth(pet, lifeStage) {
-      resetSelect(activityEl, "-- Select Activity Level --");
-      if (!lifeStage) return;
-      if ((pet === "cat" && lifeStage === "kitten") || (pet === "dog" && lifeStage === "puppy")) {
-        activityLabel.firstChild.nodeValue = pet === "cat" ? "Growth Stage (Kitten)" : "Growth Stage (Puppy)";
-        const list = pet === "cat" ? GROWTH_KITTEN : GROWTH_PUPPY;
-        list.forEach(item => {
-          const opt = document.createElement("option");
-          opt.value = item.value;
-          opt.textContent = item.label;
-          activityEl.appendChild(opt);
-        });
-        enableSelect(activityEl);
-      } else {
-        activityLabel.firstChild.nodeValue = "Activity Level";
-        ACTIVITY_OPTIONS.forEach(o => {
-          const opt = document.createElement("option");
-          opt.value = o.value;
-          opt.textContent = o.text;
-          activityEl.appendChild(opt);
-        });
-        enableSelect(activityEl);
-      }
-    }
+      lifeStageEl.addEventListener("change", () => {
+        resetDependencies(["weight", "foodType", "brand", "product"]);
+        if (lifeStageEl.value) {
+          populateActivityOrGrowth(petTypeEl.value, lifeStageEl.value);
+        } else {
+          resetSelect(activityEl, t("pets.select_activity_level"));
+          setLabelText(activityLabel, t("pets.activity_level"));
+        }
+        updateCalculateButtonState();
+      });
 
-    // ---------- event handlers ----------
-    petTypeEl.addEventListener("change", () => {
-      resetSelect(lifeStageEl, "-- Select Life Stage --");
-      resetDependencies(["activity", "weight", "foodType", "brand", "product"]);
-      if (!petTypeEl.value) {
-        lifeStageEl.disabled = true;
-      } else {
-        const list = LIFE_STAGES[petTypeEl.value] || [];
-        list.forEach(stage => {
-          const opt = document.createElement("option");
-          opt.value = stage.toLowerCase();
-          opt.textContent = stage;
-          lifeStageEl.appendChild(opt);
-        });
-        enableSelect(lifeStageEl);
-      }
-      updateCalculateButtonState();
-    });
-
-    lifeStageEl.addEventListener("change", () => {
-      resetDependencies(["weight", "foodType", "brand", "product"]);
-      if (lifeStageEl.value) {
-        populateActivityOrGrowth(petTypeEl.value, lifeStageEl.value);
-      } else {
-        resetSelect(activityEl, "-- Select Activity Level --");
-      }
-      updateCalculateButtonState();
-    });
-
-    activityEl.addEventListener("change", () => {
-      resetDependencies(["foodType", "brand", "product"]);
-      if (activityEl.value) {
-        weightEl.disabled = false;
-        weightUnitEl.disabled = false;
-      } else {
-        weightEl.value = "";
-        weightEl.disabled = true;
-        weightUnitEl.disabled = true;
-      }
-      updateCalculateButtonState();
-    });
-
-    weightEl.addEventListener("input", () => {
-      const pet = petTypeEl.value;
-      const life = lifeStageEl.value;
-      const act = activityEl.value;
-      const weight = parseFloat(weightEl.value);
-      if (pet && life && act && !isNaN(weight) && weight > 0) {
-        foodTypeEl.disabled = false;
-      } else {
+      activityEl.addEventListener("change", () => {
         resetDependencies(["foodType", "brand", "product"]);
-      }
-      updateCalculateButtonState();
-    });
-    weightUnitEl.addEventListener("change", updateCalculateButtonState);
-
-    foodTypeEl.addEventListener("change", () => {
-      resetSelect(brandEl, "-- Select Brand --");
-      resetSelect(productEl, "-- Select Product --");
-      feedingResultEl.style.display = "none";
-      calorieResultEl.style.display = "none";
-      if (!foodTypeEl.value) {
-        brandEl.disabled = true;
-        productEl.disabled = true;
+        if (activityEl.value) {
+          weightEl.disabled = false;
+          weightUnitEl.disabled = false;
+        } else {
+          weightEl.value = "";
+          weightEl.disabled = true;
+          weightUnitEl.disabled = true;
+        }
         updateCalculateButtonState();
-        return;
-      }
-      const pet = petTypeEl.value;
-      const type = foodTypeEl.value;
-      const brands = [...new Set(PRODUCTS.filter(p => p.pet === pet && p.type === type).map(p => p.brand))];
-      brands.forEach(b => {
-        const opt = document.createElement("option");
-        opt.value = b;
-        opt.textContent = b;
-        brandEl.appendChild(opt);
       });
-      brandEl.disabled = brands.length === 0;
-      updateCalculateButtonState();
-    });
 
-    brandEl.addEventListener("change", () => {
-      resetSelect(productEl, "-- Select Product --");
-      feedingResultEl.style.display = "none";
-      calorieResultEl.style.display = "none";
-      if (!brandEl.value) {
-        productEl.disabled = true;
+      weightEl.addEventListener("input", () => {
+        const pet = petTypeEl.value;
+        const life = lifeStageEl.value;
+        const act = activityEl.value;
+        const weight = parseFloat(weightEl.value);
+        if (pet && life && act && !isNaN(weight) && weight > 0) {
+          // populate foodType (Premium / Economic)
+          resetSelect(foodTypeEl, t("pets.select_food_type"));
+          const optP = new Option(t("pets.premium"), "Premium");
+          const optE = new Option(t("pets.economic"), "Economic");
+          foodTypeEl.appendChild(optP);
+          foodTypeEl.appendChild(optE);
+          foodTypeEl.disabled = false;
+        } else {
+          resetDependencies(["foodType", "brand", "product"]);
+        }
         updateCalculateButtonState();
-        return;
-      }
-      const pet = petTypeEl.value;
-      const type = foodTypeEl.value;
-      const brand = brandEl.value;
-      const prods = PRODUCTS.filter(p => p.pet === pet && p.type === type && p.brand === brand);
-      prods.forEach(prod => {
-        const opt = document.createElement("option");
-        opt.value = prod.name;
-        opt.textContent = prod.name;
-        productEl.appendChild(opt);
       });
-      productEl.disabled = prods.length === 0;
-      updateCalculateButtonState();
-    });
 
-    productEl.addEventListener("change", () => {
-      feedingResultEl.style.display = "none";
-      calorieResultEl.style.display = "none";
-      updateCalculateButtonState();
-    });
+      foodTypeEl.addEventListener("change", () => {
+        resetSelect(brandEl, t("pets.select_brand"));
+        resetSelect(productEl, t("pets.select_product"));
+        feedingResultEl.style.display = "none";
+        calorieResultEl.style.display = "none";
+        productResultEl.style.display = "none";
+        if (!foodTypeEl.value) {
+          brandEl.disabled = true;
+          productEl.disabled = true;
+          updateCalculateButtonState();
+          return;
+        }
+        const pet = petTypeEl.value;
+        const type = foodTypeEl.value;
+        // brands (should be Petzybites only)
+        const brands = [...new Set(PRODUCTS.filter(p => p.pet === pet && p.type === type).map(p => p.brand))];
+        brands.forEach(b => brandEl.appendChild(new Option(b, b)));
+        brandEl.disabled = brands.length === 0;
+        // إذا كان خيار واحد، نختاره تلقائياً ونشغّل حدث change علشان يملأ المنتجات
+        if (brands.length === 1) {
+          brandEl.value = brands[0];
+          brandEl.dispatchEvent(new Event('change'));
+        }
+        updateCalculateButtonState();
+      });
 
-    // ---------- calculation ----------
-    function calcRER(kg) {
-      return 70 * Math.pow(kg, 0.75);
-    }
+      brandEl.addEventListener("change", () => {
+        resetSelect(productEl, t("pets.select_product"));
+        feedingResultEl.style.display = "none";
+        calorieResultEl.style.display = "none";
+        productResultEl.style.display = "none";
+        if (!brandEl.value) {
+          productEl.disabled = true;
+          updateCalculateButtonState();
+          return;
+        }
+        const pet = petTypeEl.value;
+        const type = foodTypeEl.value;
+        const brand = brandEl.value;
+        const prods = PRODUCTS.filter(p => p.pet === pet && p.type === type && p.brand === brand);
+        prods.forEach(prod => productEl.appendChild(new Option(prod.name, prod.name)));
+        productEl.disabled = prods.length === 0;
+        if (prods.length === 1) {
+          productEl.value = prods[0].name;
+        }
+        updateCalculateButtonState();
+      });
 
-    function pickMerFactor(pet, lifeStage, activityOrGrowth) {
-      if (!MER_FACTORS[pet]) return 1.2;
-      if (lifeStage === "kitten") {
-        return MER_FACTORS[pet].kitten?.[activityOrGrowth] || 2.0;
+      productEl.addEventListener("change", () => {
+        feedingResultEl.style.display = "none";
+        calorieResultEl.style.display = "none";
+        productResultEl.style.display = "none";
+        updateCalculateButtonState();
+      });
+
+      // ---------- حسابات ----------
+      function calcRER(kg) {
+        return 70 * Math.pow(kg, 0.75);
       }
-      if (lifeStage === "puppy") {
-        return MER_FACTORS[pet].puppy?.[activityOrGrowth] || 2.0;
-      }
-      const stageKey = lifeStage === "senior" ? "senior" : "adult";
-      const act = activityOrGrowth || "normal";
-      return MER_FACTORS[pet][stageKey]?.[act] || 1.2;
-    }
 
-    calculateBtn.addEventListener("click", () => {
-      const pet = petTypeEl.value;
-      let weight = parseFloat(weightEl.value);
-      const unit = weightUnitEl.value;
-      const activity = activityEl.value;
-      const foodType = foodTypeEl.value;
-      const brand = brandEl.value;
-      const prodName = productEl.value;
-
-      const prod = PRODUCTS.find(p => p.pet === pet && p.type === foodType && p.brand === brand && p.name === prodName);
-      if (!pet || !weight || !activity || !foodType || !brand || !prod) {
-        alert("Please fill all fields correctly before calculating.");
-        return;
+      function pickMerFactor(pet, lifeStage, activityOrGrowth) {
+        if (!MER_FACTORS[pet]) return 1.2;
+        if (lifeStage === "kitten") return MER_FACTORS[pet].kitten?.[activityOrGrowth] || 2.0;
+        if (lifeStage === "puppy") return MER_FACTORS[pet].puppy?.[activityOrGrowth] || 2.0;
+        const stageKey = lifeStage === "senior" ? "senior" : "adult";
+        const act = activityOrGrowth || "normal";
+        return MER_FACTORS[pet][stageKey]?.[act] || 1.2;
       }
 
-      if (unit === "lb") weight = weight * 0.45359237;
+      calculateBtn.addEventListener("click", () => {
+        const pet = petTypeEl.value;
+        let weight = parseFloat(weightEl.value);
+        const unit = weightUnitEl.value;
+        const activity = activityEl.value;
+        const foodType = foodTypeEl.value;
+        const brand = brandEl.value;
+        const prodName = productEl.value;
 
-      const rer = calcRER(weight);
-      const merFactor = pickMerFactor(pet, lifeStageEl.value, activity);
-      const foodAdj = FOOD_FACTORS[foodType] || 1.0;
-      const dailyCalories = Math.round(rer * merFactor * foodAdj);
+        const prod = PRODUCTS.find(p => p.pet === pet && p.type === foodType && p.brand === brand && p.name === prodName);
+        if (!pet || !weight || !activity || !foodType || !brand || !prod) {
+          alert("Please fill all fields correctly before calculating.");
+          return;
+        }
 
-      calorieResultEl.style.display = "block";
-      calorieResultEl.innerHTML = `<strong>Daily Calories:</strong> ${dailyCalories} kcal (RER ${Math.round(rer)} × factor ${merFactor} × foodAdj ${foodAdj})`;
+        if (unit === "lb") weight = weight * 0.45359237;
 
-      let feedingText = "";
-      if (prod.type === "dry") {
+        const rer = calcRER(weight);
+        const merFactor = pickMerFactor(pet, lifeStageEl.value, activity);
+
+        // حاليا بنحافظ على FOOD_FACTORS كبيانات لكن بنستخدم عامل 1.0 كـ adjustment افتراضي
+        // لو عايب تستخدم cal كعامل، هنحتاج تعريف واضح (هل cal هو kcal/g أو multiplier؟)
+        const foodAdj = 1.0;
+
+        const dailyCalories = Math.round(rer * merFactor * foodAdj);
+
+        calorieResultEl.style.display = "flex";
+        calorieResultEl.innerHTML = `<p><strong>${t("results.daily_calories")}:</strong></p> <p>${dailyCalories} kcal </p>`;
+
+        let feedingText = "";
         const gramsPerDay = (dailyCalories / prod.calories_per_100g) * 100;
         const cups = prod.grams_per_cup ? gramsPerDay / prod.grams_per_cup : null;
+
         if (cups !== null) {
-          feedingText = `Recommended: <strong>${Math.round(gramsPerDay)} g/day</strong> (≈ ${cups.toFixed(1)} cups/day)<br>Product: ${prod.name} (${prod.brand}) — ${prod.calories_per_100g} kcal/100g.`;
+          feedingText = `<p><strong>${Math.round(gramsPerDay)} g/${t("units.day")}</strong></p> <p>(≈ ${cups.toFixed(1)} ${t("units.cups")}/${t("units.day")})</p>`;
         } else {
-          feedingText = `Recommended: <strong>${Math.round(gramsPerDay)} g/day</strong> (no cup conversion)<br>Product: ${prod.name} (${prod.brand}) — ${prod.calories_per_100g} kcal/100g.`;
+          feedingText = `<p><strong>${Math.round(gramsPerDay)} g/${t("units.day")}</strong></p> <p>${t("results.product")}: ${prod.name} (${prod.brand}) — ${prod.calories_per_100g} kcal/100g</p>`;
         }
-      } else if (prod.type === "wet") {
-        const cansPerDay = dailyCalories / prod.calories_per_can;
-        const gramsPerDay = cansPerDay * prod.grams_per_can;
-        feedingText = `Recommended: <strong>${cansPerDay.toFixed(1)} cans/day</strong> (~${Math.round(gramsPerDay)} g/day)<br>Product: ${prod.name} (${prod.brand}).`;
-      }
 
-      feedingResultEl.style.display = "block";
-      feedingResultEl.innerHTML = `<strong>Feeding recommendation:</strong><br>${feedingText}`;
-    });
+        feedingResultEl.style.display = "flex";
+        feedingResultEl.innerHTML = `<p><strong>${feedingText}</strong></p>`;
+        productResultEl.style.display = "flex";
+        productResultEl.innerHTML = `<p><strong>${t("results.product")}:</strong> ${prod.name}</p> <p><strong>${t("pets.brand")}:</strong> ${prod.brand}</p> <p class="cal_note"> ${prod.calories_per_100g} kcal/100g </p>`;
 
-    // ---------- init ----------
-    (function init() {
-      resetSelect(lifeStageEl, "-- Select Life Stage --");
-      resetSelect(activityEl, "-- Select Activity Level --");
-      resetSelect(brandEl, "-- Select Brand --");
-      resetSelect(productEl, "-- Select Product --");
+      });
 
-      foodTypeEl.value = "";
+      // ---------- init (reset) ----------
+      resetSelect(lifeStageEl, t("pets.select_life_stage"));
+      resetSelect(activityEl, t("pets.select_activity_level"));
+      resetSelect(brandEl, t("pets.select_brand"));
+      resetSelect(productEl, t("pets.select_product"));
+      // foodType initially disabled (user will fill it after weight)
+      resetSelect(foodTypeEl, t("pets.select_food_type"));
       foodTypeEl.disabled = true;
+
       weightEl.disabled = true;
       weightUnitEl.disabled = true;
       calculateBtn.disabled = true;
 
+      // ensure state updates on manual changes
       [petTypeEl, lifeStageEl, activityEl, weightEl, weightUnitEl, foodTypeEl, brandEl, productEl]
         .forEach(el => el.addEventListener('change', updateCalculateButtonState));
-
-      petTypeEl.addEventListener('change', () => resetDependencies(["activity", "weight", "foodType", "brand", "product"]));
-      lifeStageEl.addEventListener('change', () => resetDependencies(["weight", "foodType", "brand", "product"]));
-    })();
+    });
   </script>
-  
 </body>
 
 </html>
