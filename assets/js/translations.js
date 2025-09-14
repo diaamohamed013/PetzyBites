@@ -85,6 +85,10 @@ const translations = {
     "units.cups":"Cups",
     "results.product":"Product",
     "results.feeding_recommendation":"Feeding recommendation",
+    "pets.kitten_cat": "Kitten",
+    "pets.puppy_dog": "Puppy",
+    "pets.adult": "Adult",
+    "pets.senior": "Senior",
 
     "hero.title1": "Natural nutrition for your beloved pets",
     "hero.subtitle1": "Because they deserve the best every day.",
@@ -636,6 +640,10 @@ const translations = {
     "units.cups": "كوب",
     "results.product": "المنتج",
     "results.feeding_recommendation": "توصية التغذية",
+    "pets.kitten_cat":"قط صغير",
+    "pets.puppy_dog":"جرو",
+    "pets.adult":"بالغ",
+    "pets.senior":"كبير السن",
 
     "hero.title1": "تغذية طبيعية لحيواناتك الأليفة المحبوبة",
     "hero.subtitle1": "لأنهم يستحقون الأفضل كل يوم",

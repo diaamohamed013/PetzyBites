@@ -748,7 +748,7 @@
       };
 
       // life stages & growth
-      const LIFE_STAGES = { cat: ["Kitten", "Adult", "Senior"], dog: ["Puppy", "Adult", "Senior"] };
+      const LIFE_STAGES = { cat: [t("pets.kitten_cat"), t("pets.adult"), t("pets.senior")], dog: [t("pets.puppy_dog"), t("pets.adult"), t("pets.senior")] };
       const GROWTH_KITTEN = [
         { value: "kit_lt4", label: t("growth.kitten.lt4") },
         { value: "kit_4_9", label: t("growth.kitten.4_9") },
@@ -870,7 +870,7 @@
       function populateActivityOrGrowth(pet, lifeStage) {
         resetSelect(activityEl, t("pets.select_activity_level"));
         if (!lifeStage) return;
-        if ((pet === "cat" && lifeStage === "kitten") || (pet === "dog" && lifeStage === "puppy")) {
+        if ((pet === "cat" && lifeStage === t("pets.kitten_cat")) || (pet === "dog" && lifeStage === t("pets.puppy_dog"))) {
           setLabelText(activityLabel, pet === "cat" ? t("pets.kitten") : t("pets.puppy"));
           const list = pet === "cat" ? GROWTH_KITTEN : GROWTH_PUPPY;
           list.forEach(item => {
