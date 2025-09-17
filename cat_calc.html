@@ -311,7 +311,7 @@
     }
 
     #navmenu.navmenu a:not(.category_links a) {
-      font-size: 22px !important;
+      font-size: 20px !important;
     }
 
     .header .logo img {
@@ -333,7 +333,7 @@
         <option value="ar">عربي</option>
       </select>
     </div>
-    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+    <div class="container-fluid d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center">
         <img src="assets/img/logo.png" alt="PetzyBites">
@@ -343,11 +343,23 @@
         <ul>
           <li><a href="index.html" data-translate="nav.home">Home</a></li>
           <li><a href="about.html" data-translate="nav.about">About Us</a></li>
-          <li><a href="brands.html" data-translate="nav.brands">Our Brands</a></li>
-          <li><a href="https://101bite.com/store" data-translate="nav.store">Our Store</a></li>
+          <li class="nav-item dropdown megamenu-li dmenu" style="position: relative;">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdown01" aria-haspopup="true" aria-expanded="false"
+              data-translate="nav.brands">
+              Our Brands
+            </a>
+            <div class="dropdown-menu megamenu sm-menu border-top brandDropDown" aria-labelledby="dropdown01">
+              <div class="menu_content">
+                <div class="category_links">
+                  <a href="brands.html" data-translate="nav.brands">Our Brands</a>
+                  <a href="https://101bite.com/store" data-translate="nav.store">Our Store</a>
+                </div>
+              </div>
+            </div>
+          </li>
           <li><a href="pets_calculator.html" data-translate="nav.pets_calculator" class="active">Pets</a></li>
           <li class="nav-item dropdown megamenu-li dmenu">
-            <a class="nav-link dropdown-toggle active" href="#" id="dropdown01" aria-haspopup="true"
+            <a class="nav-link dropdown-toggle" href="#" id="dropdown01" aria-haspopup="true"
               aria-expanded="false" data-translate="nav.blog">
               Our Blog
             </a>
@@ -578,15 +590,26 @@
               </div>
               <div class="mt-2 results">
                 <button id="calculateBtn" disabled data-translate="calory.calculate">Calculate</button>
-                <div class="row justify-content-center mt-5" style="row-gap: 15px;">
-                  <div class="col-xl-4 col-md-6">
-                    <div id="calorieResult" class="result" style="display:none"></div>
+                <div class="row mt-5" style="row-gap: 15px;">
+                  <div class="col-xl-6 col-lg-6">
+                    <div class="row justify-content-center" style="row-gap: 15px;">
+                      <div class="col-xl-6 col-md-6">
+                        <div id="calorieResult" class="result" style="display:none"></div>
+                      </div>
+                      <div class="col-xl-6 col-md-6">
+                        <div id="feedingResult" class="result" style="display:none"></div>
+                      </div>
+                      <div class="col-xl-6 col-md-6">
+                        <div id="productResult" class="result" style="display:none"></div>
+                      </div>
+                    </div>
                   </div>
-                  <div class="col-xl-4 col-md-6">
-                    <div id="feedingResult" class="result" style="display:none"></div>
-                  </div>
-                  <div class="col-xl-4 col-md-6">
-                    <div id="productResult" class="result" style="display:none"></div>
+                  <div class="col-xl-6 xol-lg-6">
+                    <div class="row">
+                      <div class="col-12">
+                        <div id="productInfoResult" style="display:none"></div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -646,7 +669,12 @@
             <div class="footer-contact pt-3">
               <p data-translate="footer.address1"></p>
               <p data-translate="footer.address2">Egypt</p>
-              <p class="mt-3"><strong data-translate="footer.phone.label"></strong> <span></span></p>
+              <p class="mt-3">
+                <strong data-translate="footer.phone.label"></strong>
+                <span>
+                  <a href="tel:+201022323293" dir="ltr">+20 102 232 3293</a>
+                </span>
+              </p>
               <p><strong data-translate="footer.email.label">Email:</strong> <span>info@petzybites.com</span></p>
             </div>
           </div>
@@ -688,8 +716,10 @@
         </div>
 
         <div class="social-links order-first order-lg-last mb-3 mb-lg-0">
-          <a href="https://www.facebook.com/PetzyBites"><i class="bi bi-facebook"></i></a>
-          <a href="https://www.instagram.com/petzybites/"><i class="bi bi-instagram"></i></a>
+          <a href="https://www.facebook.com/PetzyBites" target="_blank"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.instagram.com/petzybites/" target="_blank"><i class="bi bi-instagram"></i></a>
+          <a href="https://wa.me/+201022323293" target="_blank"><i class="bi bi-whatsapp"></i></a>
+          <a href="https://www.tiktok.com/@petzybites?_t=ZS-8zkHFTqQNRH&_r=1" target="_blank"><i class="bi bi-tiktok"></i></a>
         </div>
 
       </div>
@@ -731,12 +761,12 @@
       // ---------- PRODUCTS (4) ----------
       const PRODUCTS = [
         // Cats
-        { pet: "cat", type: "Premium", brand: "Petzybites", name: "Bessa Bites", calories_per_100g: 380, grams_per_cup: 95 },
-        { pet: "cat", type: "Economic", brand: "Petzybites", name: "MshMsh", calories_per_100g: 320, grams_per_cup: 100 },
+        { pet: "cat", type: "Premium", brand: "Petzybites", name: "Bessa Bites", desc: t("brands.bessa.adult.desc"), benefit1: t("brands.bessa.adult.protein"), benefit2: t("brands.bessa.adult.vitamins"), benefit3: t("brands.bessa.adult.minerals"), benefit4: t("brands.bessa.adult.taurine"), suitableFor: t("brands.bessa.adult.suitable"), image: "assets/img/bessa-brand.png", prodLink: "https://web.facebook.com/bessabites", calories_per_100g: 380, grams_per_cup: 95 },
+        { pet: "cat", type: "Economic", brand: "Petzybites", name: "MshMsh", desc: t("brands.bessa.kitten.desc"), benefit1: t("brands.bessa.kitten.protein"), benefit2: t("brands.bessa.kitten.vitamins"), benefit3: t("brands.bessa.kitten.minerals"), benefit4: t("brands.bessa.kitten.dha"), suitableFor: t("brands.bessa.kitten.suitable"), image: "assets/img/mshmsh-brand.png", prodLink: "https://web.facebook.com/bessabites", calories_per_100g: 320, grams_per_cup: 100 },
 
         // Dogs
-        { pet: "dog", type: "Premium", brand: "Petzybites", name: "101Bites", calories_per_100g: 370, grams_per_cup: 110 },
-        { pet: "dog", type: "Economic", brand: "Petzybites", name: "Doggo", calories_per_100g: 330, grams_per_cup: 115 }
+        { pet: "dog", type: "Premium", brand: "Petzybites", name: "101Bites", desc: t("brands.101.adult.desc"), benefit1: t("brands.101.adult.protein"), benefit2: t("brands.101.adult.vitamins"), benefit3: t("brands.101.adult.minerals"), benefit4: t("brands.101.adult.omega"), suitableFor: t("brands.101.adult.suitable"), image: "assets/img/101-brand.png", prodLink: "https://web.facebook.com/profile.php?id=61575007538336", calories_per_100g: 370, grams_per_cup: 110 },
+        { pet: "dog", type: "Economic", brand: "Petzybites", name: "Doggo", desc: t("brands.101.puppy.desc"), benefit1: t("brands.101.puppy.protein"), benefit2: t("brands.101.puppy.dha"), benefit3: t("brands.101.puppy.calcium"), benefit4: t("brands.101.puppy.antioxidants"), suitableFor: t("brands.101.puppy.suitable"), image: "assets/img/doggo-brand.png", prodLink: "https://web.facebook.com/profile.php?id=61575007538336", calories_per_100g: 330, grams_per_cup: 115 }
       ];
 
       // ---------- FOOD FACTORS (محفوظ كما طلبت) ----------
@@ -795,6 +825,7 @@
       const calorieResultEl = document.getElementById("calorieResult");
       const feedingResultEl = document.getElementById("feedingResult");
       const productResultEl = document.getElementById("productResult");
+      const productInfoResultEl = document.getElementById("productInfoResult");
 
       // ---------- helpers ----------
       function resetSelect(el, placeholderText) {
@@ -863,6 +894,7 @@
         calorieResultEl.style.display = "none";
         feedingResultEl.style.display = "none";
         productResultEl.style.display = "none";
+        productInfoResultEl.style.display = "none";
         updateCalculateButtonState();
       }
 
@@ -961,6 +993,7 @@
         feedingResultEl.style.display = "none";
         calorieResultEl.style.display = "none";
         productResultEl.style.display = "none";
+        productInfoResultEl.style.display = "none";
         if (!foodTypeEl.value) {
           brandEl.disabled = true;
           productEl.disabled = true;
@@ -986,6 +1019,7 @@
         feedingResultEl.style.display = "none";
         calorieResultEl.style.display = "none";
         productResultEl.style.display = "none";
+        productInfoResultEl.style.display = "none";
         if (!brandEl.value) {
           productEl.disabled = true;
           updateCalculateButtonState();
@@ -1007,6 +1041,7 @@
         feedingResultEl.style.display = "none";
         calorieResultEl.style.display = "none";
         productResultEl.style.display = "none";
+        productInfoResultEl.style.display = "none";
         updateCalculateButtonState();
       });
 
@@ -1067,6 +1102,43 @@
         feedingResultEl.innerHTML = `<p><strong>${feedingText}</strong></p>`;
         productResultEl.style.display = "flex";
         productResultEl.innerHTML = `<p><strong>${t("results.product")}:</strong> ${prod.name}</p> <p><strong>${t("pets.brand")}:</strong> ${prod.brand}</p> <p class="cal_note"> ${prod.calories_per_100g} kcal/100g </p>`;
+
+        productInfoResultEl.style.display = "block";
+        productInfoResultEl.innerHTML =
+          `
+            <div class="our-products-cards">
+            <div class="product-card-single">
+              <div class="our-product-card p-4 shadow rounded bg-white mx-0">
+                <div>
+                  <img src="${prod.image}" alt="Product 4" class="img-fluid mb-3 our-product-img">
+                  <h5 class="mb-2" data-translate="brands.bessa.kitten.title">${prod.name}</h5>
+                  <p data-translate="brands.bessa.kitten.desc">${prod.desc}</p>
+                </div>
+                <div class="our-product-content">
+                  <div>
+                    <strong data-translate="brands.nutrition">${t("brands.nutrition")}</strong>
+                    <ul>
+                      <li data-translate="${prod.benefit1}">${prod.benefit1}</li>
+                      <li data-translate="${prod.benefit2}">${prod.benefit2}</li>
+                      <li data-translate="${prod.benefit3}">${prod.benefit3}</li>
+                      <li data-translate="${prod.benefit4}">${prod.benefit4}</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <strong data-translate="brands.suitable">${t("brands.suitable")}</strong>
+                    <p data-translate="${prod.suitableFor}">${prod.suitableFor}</p>
+                  </div>
+                  <div class="product-btn-row">
+                    <a class="product-btn" href="https://101bite.com/store" data-translate="brands.bessa.buy">${t("brands.bessa.buy")}</a>
+                    <span class="product-social">
+                      <a href="${prod.prodLink}" target="_blank" title="Facebook"><i class="bi bi-facebook"></i></a>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div>
+            `;
 
       });
 

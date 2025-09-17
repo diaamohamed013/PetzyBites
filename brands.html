@@ -372,7 +372,7 @@
         <option value="ar">عربي</option>
       </select>
     </div>
-    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+    <div class="container-fluid d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center">
         <img src="assets/img/logo.png" alt=" ">
@@ -382,8 +382,20 @@
         <ul>
           <li><a href="index.html" data-translate="nav.home">Home</a></li>
           <li><a href="about.html" data-translate="nav.about">About Us</a></li>
-          <li><a href="brands.html" class="active" data-translate="nav.brands">Our Brands</a></li>
-          <li><a href="https://101bite.com/store" data-translate="nav.store">Our Store</a></li>
+          <li class="nav-item dropdown megamenu-li dmenu" style="position: relative;">
+            <a class="nav-link dropdown-toggle active" href="#" id="dropdown01" aria-haspopup="true" aria-expanded="false"
+              data-translate="nav.brands">
+              Our Brands
+            </a>
+            <div class="dropdown-menu megamenu sm-menu border-top brandDropDown" aria-labelledby="dropdown01">
+              <div class="menu_content">
+                <div class="category_links">
+                  <a href="brands.html" class="active" data-translate="nav.brands">Our Brands</a>
+                  <a href="https://101bite.com/store" data-translate="nav.store">Our Store</a>
+                </div>
+              </div>
+            </div>
+          </li>
           <li><a href="pets_calculator.html" data-translate="nav.pets_calculator">Pets</a></li>
           <li class="nav-item dropdown megamenu-li dmenu">
             <a class="nav-link dropdown-toggle" href="#" id="dropdown01" aria-haspopup="true" aria-expanded="false"
@@ -526,7 +538,7 @@
                   <p data-translate="brands.101.adult.suitable">Adult dogs</p>
                 </div>
                 <div class="product-btn-row">
-                  <a class="product-btn" href="https://101bite.com/101Bites" data-translate="brands.101.buy">Buy Now</a>
+                  <a class="product-btn" href="https://101bite.com/store" data-translate="brands.101.buy">Buy Now</a>
                   <span class="product-social">
                     <a href="https://web.facebook.com/profile.php?id=61575007538336" target="_blank" title="Facebook"><i class="bi bi-facebook"></i></a>
                   </span>
@@ -554,7 +566,7 @@
                   <p data-translate="brands.101.puppy.suitable">Puppies under 6 months old</p>
                 </div>
                 <div class="product-btn-row">
-                  <a class="product-btn" href="https://101bite.com/101Bites" data-translate="brands.101.buy">Buy Now</a>
+                  <a class="product-btn" href="https://101bite.com/store" data-translate="brands.101.buy">Buy Now</a>
                   <span class="product-social">
                     <a href="https://web.facebook.com/profile.php?id=61575007538336" target="_blank" title="Facebook"><i class="bi bi-facebook"></i></a>
                   </span>
@@ -582,7 +594,7 @@
                   <p data-translate="brands.bessa.adult.suitable">Cats over 6 months old</p>
                 </div>
                 <div class="product-btn-row">
-                  <a class="product-btn" href="https://101bite.com/BessaBites" data-translate="brands.bessa.buy">Buy Now</a>
+                  <a class="product-btn" href="https://101bite.com/store" data-translate="brands.bessa.buy">Buy Now</a>
                   <span class="product-social">
                     <a href="https://web.facebook.com/bessabites" target="_blank" title="Facebook"><i class="bi bi-facebook"></i></a>
                   </span>
@@ -610,7 +622,7 @@
                   <p data-translate="brands.bessa.kitten.suitable">Kittens under 6 months old</p>
                 </div>
                 <div class="product-btn-row">
-                  <a class="product-btn" href="https://101bite.com/BessaBites" data-translate="brands.bessa.buy">Buy Now</a>
+                  <a class="product-btn" href="https://101bite.com/store" data-translate="brands.bessa.buy">Buy Now</a>
                   <span class="product-social">
                     <a href="https://web.facebook.com/bessabites" target="_blank" title="Facebook"><i class="bi bi-facebook"></i></a>
                   </span>
@@ -635,7 +647,12 @@
             <div class="footer-contact pt-3">
               <p data-translate="footer.address1"></p>
               <p data-translate="footer.address2">Egypt</p>
-              <p class="mt-3"><strong data-translate="footer.phone.label"></strong> <span></span></p>
+              <p class="mt-3">
+                <strong data-translate="footer.phone.label"></strong>
+                <span>
+                  <a href="tel:+201022323293" dir="ltr">+20 102 232 3293</a>
+                </span>
+              </p>
               <p><strong data-translate="footer.email.label">Email:</strong> <span>info@petzybites.com</span></p>
             </div>
           </div>
@@ -675,8 +692,10 @@
         </div>
 
         <div class="social-links order-first order-lg-last mb-3 mb-lg-0">
-          <a href="https://www.facebook.com/PetzyBites"><i class="bi bi-facebook"></i></a>
-          <a href="https://www.instagram.com/petzybites/"><i class="bi bi-instagram"></i></a>
+          <a href="https://www.facebook.com/PetzyBites" target="_blank"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.instagram.com/petzybites/" target="_blank"><i class="bi bi-instagram"></i></a>
+          <a href="https://wa.me/+201022323293" target="_blank"><i class="bi bi-whatsapp"></i></a>
+          <a href="https://www.tiktok.com/@petzybites?_t=ZS-8zkHFTqQNRH&_r=1" target="_blank"><i class="bi bi-tiktok"></i></a>
         </div>
 
       </div>
@@ -827,7 +846,7 @@
   </script>
 
   <!-- TEST: Font Awesome icon should appear below. Remove after confirming icons work. -->
-  <i class="fa-solid fa-dog" style="font-size: 40px; color: red;"></i>
+  <!-- <i class="fa-solid fa-dog" style="font-size: 40px; color: red;"></i> -->
 
   <!-- Sidebar for pet selection -->
   <div id="pet-sidebar" style="display:none; position:fixed; top:50%; right:0; transform:translateY(-50%); z-index:1050; background:#fff; border-radius:16px 0 0 16px; box-shadow:0 2px 16px rgba(0,0,0,0.08); padding:24px 12px; display:flex; flex-direction:column; align-items:center; gap:18px; min-width:60px;">

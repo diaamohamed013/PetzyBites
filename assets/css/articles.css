@@ -287,7 +287,7 @@ html[lang="ar"] .accordion-button::after {
     color: #fff !important;
 }
 
-.sm-menu .category_links .link_topics:not(.articlesBtn) {
+.sm-menu .category_links .link_topics:not(.articlesBtn), .brandDropDown .category_links a {
     padding: 0;
     margin-bottom: 18px;
     color: #fff;
@@ -300,7 +300,7 @@ html[lang="ar"] .accordion-button::after {
     -o-transition: all .3s;
 }
 
-.sm-menu .category_links .link_topics:not(.articlesBtn):hover {
+.sm-menu .category_links .link_topics:not(.articlesBtn):hover, .brandDropDown .category_links a:hover, .brandDropDown .category_links a.active {
     color: #0AFFF3;
 }
 
@@ -429,6 +429,104 @@ html[lang="ar"] .accordion-button::after {
 
 html[dir="rtl"] .cal_note {
     direction: ltr;
+}
+
+html[dir="rtl"] .header .logo {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.footer-about a {
+    color: #fff;
+}
+
+.brandDropDown {
+    left: 15px;
+    right: unset;
+    width: fit-content;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+
+html[dir="rtl"] .brandDropDown {
+    left: unset;
+    right: 15px;
+}
+
+.footer .social-links a {
+    background: #fff;
+    line-height: normal;
+}
+
+#navmenu.navmenu a:not(.category_links a) {
+    font-size: 20px !important;
+}
+
+.our-product-content .product-btn-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: auto;
+}
+
+.our-product-content .product-btn {
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 32px;
+    font-size: .85rem;
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+.our-product-content .product-social {
+    display: flex;
+    align-items: center;
+    margin-top: 17px;
+}
+
+.our-product-content .product-social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #3b5998;
+    color: #fff;
+    width: 44px;
+    height: 44px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    margin-left: 0;
+    margin-right: 0;
+    transition: background 0.2s, color 0.2s;
+    box-shadow: 0 2px 6px rgba(24, 119, 243, 0.08);
+}
+
+.our-product-content .product-social a:hover {
+    background: #2d4985;
+    color: #fff;
+}
+
+.our-product-content p,
+.our-product-content ul,
+.our-product-content li {
+    font-size: .95rem;
+}
+
+.our-product-content strong {
+    font-size: 1rem;
+}
+
+.our-product-img {
+    width: 100%;
+    max-width: 480px;
+    max-height: 400px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 @media (max-width: 1198.98px) {
