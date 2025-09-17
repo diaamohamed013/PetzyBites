@@ -5,13 +5,13 @@ const translations = {
     "nav.brands": "Our Brands",
     "nav.store": "Our Store",
     "nav.gallery": "Family Gallery",
-    "nav.contact": "Contact Us",
+    "nav.contact": "Contact",
     "nav.blog": "Our Blog",
     "nav.bag": "Our Bag",
-    'nav.pets_calculator': 'Pets',
+    'nav.pets_calculator': 'Calculator',
 
 
-    "pets.pageTitle": "pet Calculator",
+    "pets.pageTitle": "Pets Calories Calculator",
     "pets.dog_calc": "Dog's Calories Calculator",
     "pets.cat_calc": "Cat's Calories Calculator",
     "pets.dog_preg": "Dog's Pregnancy Calculator",
