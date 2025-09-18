@@ -359,8 +359,8 @@
           </li>
           <li><a href="pets_calculator.html" data-translate="nav.pets_calculator" class="active">Pets</a></li>
           <li class="nav-item dropdown megamenu-li dmenu">
-            <a class="nav-link dropdown-toggle" href="#" id="dropdown01" aria-haspopup="true"
-              aria-expanded="false" data-translate="nav.blog">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdown01" aria-haspopup="true" aria-expanded="false"
+              data-translate="nav.blog">
               Our Blog
             </a>
             <div class="dropdown-menu megamenu sm-menu border-top" aria-labelledby="dropdown01">
@@ -481,7 +481,7 @@
 
     <div class="page-title dark-background" data-aos="fade" style="background-image: url(assets/img/);">
       <div class="container position-relative">
-        <h1 data-translate="pets.dog_calc">pet Calculator</h1>
+        <h1 data-translate="pets.cat_calc">Cat's Calories Calculator</h1>
       </div>
     </div>
 
@@ -517,20 +517,22 @@
                       </span>
                       <select id="petType">
                         <option value="" data-translate="pets.select_type">-- Select Pet --</option>
-                        <option value="cat" data-translate="pets.cat">Cat</option>
-                        <option value="dog" data-translate="pets.dog">Dog</option>
+                        <option value="cat" data-translate="pets.cat" selected>Cat</option>
                       </select>
                     </label>
-        
+
                     <label>
                       <span data-translate="pets.life_stage">
                         Life Stage
                       </span>
-                      <select id="lifeStage" disabled>
+                      <select id="lifeStage">
                         <option value="" data-translate="pets.select_life_stage">-- Select Life Stage --</option>
+                        <option value="kitten" data-translate="pets.kitten_cat">Kitten</option>
+                        <option value="adult" data-translate="pets.adult">Adult</option>
+                        <option value="senior" data-translate="pets.senior">Senior</option>
                       </select>
                     </label>
-        
+
                     <label id="activityLabel">
                       <span data-translate="pets.activity_level">
                         Activity Level
@@ -540,7 +542,7 @@
                         </option>
                       </select>
                     </label>
-        
+
                     <label>
                       <span data-translate="pets.weight">
                         Weight
@@ -567,7 +569,7 @@
                         <option value="Economic" data-translate="pets.economic">Dry Food Economic</option>
                       </select>
                     </label>
-        
+
                     <label>
                       <span data-translate="pets.brand">
                         Brand
@@ -576,7 +578,7 @@
                         <option value="" data-translate="pets.select_brand">-- Select Brand --</option>
                       </select>
                     </label>
-        
+
                     <label>
                       <span data-translate="pets.product">
                         Product
@@ -719,7 +721,8 @@
           <a href="https://www.facebook.com/PetzyBites" target="_blank"><i class="bi bi-facebook"></i></a>
           <a href="https://www.instagram.com/petzybites/" target="_blank"><i class="bi bi-instagram"></i></a>
           <a href="https://wa.me/+201022323293" target="_blank"><i class="bi bi-whatsapp"></i></a>
-          <a href="https://www.tiktok.com/@petzybites?_t=ZS-8zkHFTqQNRH&_r=1" target="_blank"><i class="bi bi-tiktok"></i></a>
+          <a href="https://www.tiktok.com/@petzybites?_t=ZS-8zkHFTqQNRH&_r=1" target="_blank"><i
+              class="bi bi-tiktok"></i></a>
         </div>
 
       </div>
@@ -762,11 +765,7 @@
       const PRODUCTS = [
         // Cats
         { pet: "cat", type: "Premium", brand: "Petzybites", name: "Bessa Bites", desc: t("brands.bessa.adult.desc"), benefit1: t("brands.bessa.adult.protein"), benefit2: t("brands.bessa.adult.vitamins"), benefit3: t("brands.bessa.adult.minerals"), benefit4: t("brands.bessa.adult.taurine"), suitableFor: t("brands.bessa.adult.suitable"), image: "assets/img/bessa-brand.png", prodLink: "https://web.facebook.com/bessabites", calories_per_100g: 380, grams_per_cup: 95 },
-        { pet: "cat", type: "Economic", brand: "Petzybites", name: "MshMsh", desc: t("brands.bessa.kitten.desc"), benefit1: t("brands.bessa.kitten.protein"), benefit2: t("brands.bessa.kitten.vitamins"), benefit3: t("brands.bessa.kitten.minerals"), benefit4: t("brands.bessa.kitten.dha"), suitableFor: t("brands.bessa.kitten.suitable"), image: "assets/img/mshmsh-brand.png", prodLink: "https://web.facebook.com/bessabites", calories_per_100g: 320, grams_per_cup: 100 },
-
-        // Dogs
-        { pet: "dog", type: "Premium", brand: "Petzybites", name: "101Bites", desc: t("brands.101.adult.desc"), benefit1: t("brands.101.adult.protein"), benefit2: t("brands.101.adult.vitamins"), benefit3: t("brands.101.adult.minerals"), benefit4: t("brands.101.adult.omega"), suitableFor: t("brands.101.adult.suitable"), image: "assets/img/101-brand.png", prodLink: "https://web.facebook.com/profile.php?id=61575007538336", calories_per_100g: 370, grams_per_cup: 110 },
-        { pet: "dog", type: "Economic", brand: "Petzybites", name: "Doggo", desc: t("brands.101.puppy.desc"), benefit1: t("brands.101.puppy.protein"), benefit2: t("brands.101.puppy.dha"), benefit3: t("brands.101.puppy.calcium"), benefit4: t("brands.101.puppy.antioxidants"), suitableFor: t("brands.101.puppy.suitable"), image: "assets/img/doggo-brand.png", prodLink: "https://web.facebook.com/profile.php?id=61575007538336", calories_per_100g: 330, grams_per_cup: 115 }
+        { pet: "cat", type: "Economic", brand: "Petzybites", name: "MshMsh", desc: t("brands.bessa.kitten.desc"), benefit1: t("brands.bessa.kitten.protein"), benefit2: t("brands.bessa.kitten.vitamins"), benefit3: t("brands.bessa.kitten.minerals"), benefit4: t("brands.bessa.kitten.dha"), suitableFor: t("brands.bessa.kitten.suitable"), image: "assets/img/mshmsh-brand.png", prodLink: "https://web.facebook.com/BMSHMSH", calories_per_100g: 320, grams_per_cup: 100 },
       ];
 
       // ---------- FOOD FACTORS (محفوظ كما طلبت) ----------
@@ -930,7 +929,7 @@
         resetSelect(lifeStageEl, t("pets.select_life_stage"));
         resetDependencies(["activity", "weight", "foodType", "brand", "product"]);
         if (!petTypeEl.value) {
-          lifeStageEl.disabled = true;
+          lifeStageEl.disabled = false;
         } else {
           const list = LIFE_STAGES[petTypeEl.value] || [];
           list.forEach(stage => {
@@ -1158,6 +1157,26 @@
       // ensure state updates on manual changes
       [petTypeEl, lifeStageEl, activityEl, weightEl, weightUnitEl, foodTypeEl, brandEl, productEl]
         .forEach(el => el.addEventListener('change', updateCalculateButtonState));
+
+      // Detect if we are on the "cats calories" page
+      const isCatPage = window.location.pathname.includes("cat_calc.html");
+      if (isCatPage) {
+        petTypeEl.value = "cat";
+
+        // populate life stage options مباشرة
+        resetSelect(lifeStageEl, t("pets.select_life_stage"));
+        const list = LIFE_STAGES["cat"] || [];
+        list.forEach(stage => {
+          const opt = document.createElement("option");
+          opt.value = stage.toLowerCase(); // kitten, adult, senior
+          opt.textContent = stage;
+          lifeStageEl.appendChild(opt);
+        });
+        lifeStageEl.disabled = false;
+
+        updateCalculateButtonState();
+      }
+
     });
   </script>
 </body>
