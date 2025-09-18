@@ -775,7 +775,19 @@
       };
 
       // life stages & growth
-      const LIFE_STAGES = { cat: [t("pets.kitten_cat"), t("pets.adult"), t("pets.senior")], dog: [t("pets.puppy_dog"), t("pets.adult"), t("pets.senior")] };
+      const LIFE_STAGES = {
+        cat: [
+          { value: "kitten", label: t("pets.kitten_cat") },
+          { value: "adult", label: t("pets.adult") },
+          { value: "senior", label: t("pets.senior") }
+        ],
+        dog: [
+          { value: "puppy", label: t("pets.puppy_dog") },
+          { value: "adult", label: t("pets.adult") },
+          { value: "senior", label: t("pets.senior") }
+        ]
+      };
+
       const GROWTH_KITTEN = [
         { value: "kit_lt4", label: t("growth.kitten.lt4") },
         { value: "kit_4_9", label: t("growth.kitten.4_9") },
@@ -899,7 +911,7 @@
       function populateActivityOrGrowth(pet, lifeStage) {
         resetSelect(activityEl, t("pets.select_activity_level"));
         if (!lifeStage) return;
-        if ((pet === "cat" && lifeStage === t("pets.kitten_cat")) || (pet === "dog" && lifeStage === t("pets.puppy_dog"))) {
+        if ((pet === "cat" && lifeStage === "kitten") || (pet === "dog" && lifeStage === "puppy")) {
           setLabelText(activityLabel, pet === "cat" ? t("pets.kitten") : t("pets.puppy"));
           const list = pet === "cat" ? GROWTH_KITTEN : GROWTH_PUPPY;
           list.forEach(item => {
@@ -932,8 +944,8 @@
           const list = LIFE_STAGES[petTypeEl.value] || [];
           list.forEach(stage => {
             const opt = document.createElement("option");
-            opt.value = stage.toLowerCase(); // kitten, adult, senior, puppy
-            opt.textContent = stage;
+            opt.value = stage.value; // kitten, adult, senior, puppy
+            opt.textContent = stage.label;
             lifeStageEl.appendChild(opt);
           });
           enableSelect(lifeStageEl);
@@ -1165,8 +1177,8 @@
         const list = LIFE_STAGES["dog"] || [];
         list.forEach(stage => {
           const opt = document.createElement("option");
-          opt.value = stage.toLowerCase(); // kitten, adult, senior
-          opt.textContent = stage;
+          opt.value = stage.value; // kitten, adult, senior
+          opt.textContent = stage.label;
           lifeStageEl.appendChild(opt);
         });
         lifeStageEl.disabled = false;
