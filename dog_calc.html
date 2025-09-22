@@ -1168,7 +1168,7 @@
       [petTypeEl, lifeStageEl, activityEl, weightEl, weightUnitEl, foodTypeEl, brandEl, productEl]
         .forEach(el => el.addEventListener('change', updateCalculateButtonState));
 
-      const isDogPage = window.location.pathname.includes("dog_calc.html");
+      const isDogPage = window.location.pathname.includes("dog_calc");
       if (isDogPage) {
         petTypeEl.value = "dog";
 

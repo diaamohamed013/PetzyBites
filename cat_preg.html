@@ -743,14 +743,14 @@
 
       let labels = {
         ar: {
-          expected: "🗓️ <b>التاريخ المتوقع:</b>",
-          period: "📌 <b>الفترة المتوقعة:</b>",
+          expected: "التاريخ المتوقع: ",
+          period: "الفترة المتوقعة: ",
           from: "من",
           to: "إلى"
         },
         en: {
-          expected: "🗓️ <b>Expected Date:</b>",
-          period: "📌 <b>Expected Period:</b>",
+          expected: "Expected Date: ",
+          period: "Expected Period: ",
           from: "From",
           to: "To"
         }
@@ -765,7 +765,7 @@
     ${t.to} ${maxDate.toLocaleDateString(locale)}
   `;
 
-      ResultBox.style.display = "block";
+      ResultBox.style.display = "flex";
     }
 
   </script>
