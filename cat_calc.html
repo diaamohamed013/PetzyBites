@@ -1171,7 +1171,7 @@
         .forEach(el => el.addEventListener('change', updateCalculateButtonState));
 
       // Detect if we are on the "cats calories" page
-      const isCatPage = window.location.pathname.includes("cat_calc.html");
+      const isCatPage = window.location.pathname.includes("cat_calc");
       if (isCatPage) {
         petTypeEl.value = "cat";
 
